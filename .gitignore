@@ -1,0 +1,9 @@
+firmware/uHUE.X/build/
+firmware/uHUE.X/disassembly/
+firmware/uHUE.X/dist/
+software/uHUE Tester/bin/
+software/uHUE Tester/obj/
+software/.vs/uHUE Tester/v16/.suo
+firmware/uHUE.X/nbproject/private/configurations.xml
+firmware/uHUE.X/nbproject/private/private.xml
+firmware/uHUE.X/nbproject/private/SuppressibleMessageMemo.properties

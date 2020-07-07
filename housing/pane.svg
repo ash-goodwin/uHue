@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="pane.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs2">
+    <marker
+       id="DistanceX"
+       orient="auto"
+       refX="0.0"
+       refY="0.0"
+       style="overflow:visible">
+      <path
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5"
+         style="stroke:#000000; stroke-width:0.5"
+         id="path10" />
+    </marker>
+    <pattern
+       id="Hatch"
+       patternUnits="userSpaceOnUse"
+       width="8"
+       height="8"
+       x="0"
+       y="0">
+      <path
+         d="M8 4 l-4,4"
+         stroke="#000000"
+         stroke-width="0.25"
+         linecap="square"
+         id="path13" />
+      <path
+         d="M6 2 l-4,4"
+         stroke="#000000"
+         stroke-width="0.25"
+         linecap="square"
+         id="path15" />
+      <path
+         d="M4 0 l-4,4"
+         stroke="#000000"
+         stroke-width="0.25"
+         linecap="square"
+         id="path17" />
+    </pattern>
+    <symbol
+       id="*MODEL_SPACE" />
+    <symbol
+       id="*PAPER_SPACE" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="g61"
+     inkscape:document-units="mm"
+     inkscape:cy="200.84351"
+     inkscape:cx="326.6024"
+     inkscape:zoom="1.4"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       style="fill:#ff0000"
+       transform="matrix(0.26458333,0,0,0.26458333,95.249998,-211.59391)"
+       id="g61">
+      <g
+         style="fill:#ff0000"
+         inkscape:label="0"
+         id="g24" />
+      <g
+         style="fill:#ff0000"
+         inkscape:label="CUTOUTS"
+         id="g26" />
+      <g
+         transform="translate(-168.22148,-159.13062)"
+         style="fill:#ff0000;stroke:#f90000;stroke-opacity:1"
+         inkscape:label="PERIMETER"
+         id="g36">
+        <path
+           d="M -144.48935,1245.4026 H 161.00623"
+           style="fill:#ff0000;stroke:#f90000;stroke-opacity:1"
+           id="path28" />
+        <path
+           d="M 161.00623,1245.4026 68.115456,999.63674"
+           style="fill:#ff0000;stroke:#f90000;stroke-opacity:1"
+           id="path30" />
+        <path
+           d="M 68.115456,999.63674 -161.00623,1201.7031"
+           style="fill:#ff0000;stroke:#f90000;stroke-opacity:1"
+           id="path32" />
+        <path
+           d="m -161.00623,1201.7031 16.51688,43.6995"
+           style="fill:#ff0000;stroke:#f90000;stroke-opacity:1"
+           id="path34" />
+      </g>
+    </g>
+  </g>
+</svg>
