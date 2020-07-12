@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace uHUE_Tester
@@ -34,6 +35,9 @@ namespace uHUE_Tester
             btnBlue.Click += ( o, e ) => setColour( Color.Blue );
             btnWhite.Click += ( o, e ) => setColour( White33 );
             btnOff.Click += ( o, e ) => setColour( Color.Black );
+            btnPretty.Click += ( o, e ) => startPretty();
+
+            FormClosing += ( o, e ) => stopPretty();
         }
 
         protected override void OnLoad( EventArgs e )
@@ -73,6 +77,7 @@ namespace uHUE_Tester
                 port.Open();
 
                 AddLog( "Port open" );
+                grpCommands.Enabled = true;
             }
             catch( Exception ex ) {
                 MessageBox.Show( ex.ToString() );
@@ -122,6 +127,12 @@ namespace uHUE_Tester
         }
 
         void setColour( Color colour )
+        {
+            stopPretty();
+            sendColour( colour );
+        }
+
+        void sendColour( Color colour )
         {
             if( port == null ) {
                 return;
@@ -173,6 +184,44 @@ namespace uHUE_Tester
             sb.Append( BitConverter.ToString( msg ) );
 
             AddLog( sb.ToString() );
+        }
+
+        
+        System.Threading.Timer prettyTimer;
+        int prettyStep;
+        const int PrettyModeStepIntervalMs = 50;
+
+        void stopPretty()
+        {
+            if( prettyTimer != null ) {
+                prettyTimer.Dispose();
+                prettyTimer = null;
+            }
+
+            sendColour( Color.Black );
+        }
+
+        void startPretty()
+        {
+            stopPretty();
+
+            prettyStep = 0;
+            prettyTimer = new System.Threading.Timer( doPretty, (int)numCycleTimeMs.Value, 0, PrettyModeStepIntervalMs );
+        }
+
+        void doPretty( object state )
+        {            
+            int cycleTimeMs = (int)state;
+            int totalCycleSteps = cycleTimeMs / PrettyModeStepIntervalMs;
+
+            double hue = 360.0 * prettyStep / totalCycleSteps;
+
+            sendColour( HSV.ToColor( hue, 1.0, 1.0 ) );
+
+            prettyStep++;
+            if( prettyStep == totalCycleSteps ) {
+                prettyStep = 0;
+            }
         }
     }
 }
